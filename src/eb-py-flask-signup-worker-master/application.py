@@ -14,11 +14,15 @@
 
 import logging
 import json
-
 import flask
 from flask import request, Response
 
-import boto.ses
+import boto3
+
+
+
+
+
 
 # Create and configure the Flask app
 application = flask.Flask(__name__)
