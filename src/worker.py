@@ -50,9 +50,9 @@ s3 = boto3.resource('s3')
 bucket = s3.Bucket(bucket_name)
 bucket.upload_file("upload.txt", key)
 location = boto3.client('s3').get_bucket_location(Bucket=bucket_name)['LocationConstraint']
-url = "https://s3-%s.amazonaws.com/%s/%s" % (location, bucket_name, key)
 
-musicURL = ""
+musicURL = "https://s3-%s.amazonaws.com/%s/%s" % (location, bucket_name, key)
+
 
 sqs = boto3.client('sqs')
 
