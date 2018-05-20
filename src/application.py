@@ -1,7 +1,7 @@
 import boto3
 def application():
-
     # Create SQS client
+
     sqs = boto3.client('sqs',region_name='us-east-1')
 
     #The URL of queue which stores the message sent from front-end
@@ -66,4 +66,5 @@ def application():
 # if __name__ == "__main__":
 #     application.debug = True
 #     application.run
+#fuck
 
